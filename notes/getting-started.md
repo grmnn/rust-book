@@ -99,3 +99,5 @@ This makes sense, if you just want to quickly check if your changes are working,
 - Instead of saving the result of the build in the same directory as our code, Cargo stores it in the target/debug directory.
 
 ### Building for Release
+
+To compile a Rust program for a release we can use `cargo build --release` to compile it with optimizations. This command will create an executable in __target/release__ instead of __target/debug__. The optmizations make the Rust code run faster, but turning them on lengthens the time it takes for your program to compile.
