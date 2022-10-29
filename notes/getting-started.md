@@ -2,7 +2,7 @@
 
 ## Hello World
 
-To get started we create a simple `main.rs` file which contians
+To get started we create a simple `main.rs` file which contains:
 
 ```rust
 fn main() {
@@ -11,13 +11,13 @@ fn main() {
 ```
 
 The `main` function is special, it is always the first code that runs in every executable Rust program.
-The function holds a *Rust Macro* - fundamentally, macros are a way of writing code that writes other code, which is known as metaprogramming, which we will explore later in [Chapter 19](https://doc.rust-lang.org/book/ch19-06-macros.html). For now we just need to know that using a `!` means that we're calling a macro instead of a normal function and Macros don't always folow the same rules as functions.
+The function holds a *Rust Macro* - fundamentally, macros are a way of writing code that writes other code, which is known as metaprogramming, which we will explore later in [Chapter 19](https://doc.rust-lang.org/book/ch19-06-macros.html). For now we just need to know that using a `!` means that we're calling a macro instead of a normal function and Macros don't always follow the same rules as functions.
 
 As the name of the macro indicates we print the given argument `"Hello World"` in the terminal. 
 
-To see our first programm in action, we need to *compile* and *run* our program. 
+To see our first program in action, we need to *compile* and *run* our program. 
 
-Before we can run a Rust program, we must *compile* it. To do this we will use the Rust compiler `rustc`. Entering `rustc main.rs` will compile our program and create a binary executeable `main` in our project directory. 
+Before we can run a Rust program, we must *compile* it. To do this we will use the Rust compiler `rustc`. Entering `rustc main.rs` will compile our program and create a binary executable `main` in our project directory. 
 
 Now that our program is compiled, we can *run* it. To see "Hello World" in the terminal, we can check first if its available.
 
@@ -26,7 +26,7 @@ $ ls
 main  main.rs
 ```
 
-As we see the `main` executeable is available, now we can run it by entering `./main` in our terminal and we should see our message be printed.
+As we see the `main` executable is available, now we can run it by entering `./main` in our terminal and we should see our message be printed.
 
 ```shell
 $ ./main
@@ -62,7 +62,7 @@ Running `cargo build` for the first time also causes Cargo to create a new file 
 
 Since we would need to make multiple steps to run the compiled executable, there is also a `cargo run` command which will do the compilation and running in one command. It's more convenient than having to run `cargo build`, wait for it and then use the whole path to the binary to run the program.
 
-When runnining `cargo run`, we can see it didn't compile the program again, because it is smart enough to know that nothing has changed since the last compilation, therefore skips this step. 
+When running `cargo run`, we can see it didn't compile the program again, because it is smart enough to know that nothing has changed since the last compilation, therefore skips this step. 
 
 ```shell
 cargo run
@@ -100,4 +100,4 @@ This makes sense, if you just want to quickly check if your changes are working,
 
 ### Building for Release
 
-To compile a Rust program for a release we can use `cargo build --release` to compile it with optimizations. This command will create an executable in __target/release__ instead of __target/debug__. The optmizations make the Rust code run faster, but turning them on lengthens the time it takes for your program to compile.
+To compile a Rust program for a release we can use `cargo build --release` to compile it with optimizations. This command will create an executable in __target/release__ instead of __target/debug__. The optimizations make the Rust code run faster, but turning them on lengthens the time it takes for your program to compile.
