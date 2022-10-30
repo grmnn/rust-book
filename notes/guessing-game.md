@@ -48,6 +48,8 @@ let mut user_guess = String::new();
 ```
 
 Next we will read the users input and save it to the variable we created before. *Warning:* expect() Returns the contained Ok value, because this function may panic, its use is generally discouraged but it is fine for now.
+
+The `&` indicates that this argument is a reference, which gives you a way to let multiple parts of your code access one piece of data without needing to copy that data into memory multiple times.
 ```rust
 io::stdin().read_line(&mut user_guess).expect("Failed to read from stdin");
 ```
